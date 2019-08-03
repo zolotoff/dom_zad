@@ -1,0 +1,99 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // пункт 2 задания
+
+        int a1 = 99; //32 бит
+        final int b1 =1; // постоянная
+        float c1 = 120.0f; //32 бит
+        long x1 = 1200L; //64 бит
+        byte d1 = 0; // 8 бит от -128 до 127
+        short z1 = 135; // -32768 до 32767
+        char  L1 = 'A'; // числа и символы кодировки UTF
+        double e1 = 123.2; // число с плавающей запятой
+        String s1 = "пример строковых данных";
+        boolean bul = true;
+
+// пункт 3 задания. Часть 1. часть 2 за пределами метода main
+       float s = calc();
+        System.out.println(s);
+
+// пункт 4 задания. Часть 1. часть 2 за пределами метода main
+        boolean s2 = diapazon();
+        System.out.println("функция 4 возвращает "+ s2);
+// пункт 5 задания. Часть 1. Часть 2 за пределами метода main
+       punkt5();
+
+//пункт 6 задания. Часть 1. Часть 2 за пределами метода main
+        boolean s6 = proverka();
+        System.out.println("функция 6 возвращает " + s6);
+
+// пукнт 7 задания. Часть 1. Часть 2 за пределами метода main
+        privetstvie();
+
+// пукнт 8 задания. Часть 1. Часть 2 за пределами метода main
+        int god=2014;
+        visokosniyli(god);
+/* пункт 9 задания.
+по моему мнению,
+void myMethod(int a, String b) {}
+void myMethod(String b, int a) {}
+Ответ: по моему мнению, это две разных сигнатуры одного метода.
+
+ */
+
+
+        }
+
+    private static void visokosniyli(int god) {
+        if (((( god % 4 ) == 0) && ((god % 400) == 0)) || (((god % 4) == 0) && ((god % 100) !=
+                0))) {
+            System.out.println("Год " + god + " - это високосный год");
+        } else {
+            System.out.println("Год " + god + " - это не високосный год"); };
+    }
+
+    //функция к пункту №7 задания
+    private static void privetstvie() {
+        String s7 = "Алексей";
+        System.out.println ("Привет, " + s7 + "!");}
+
+
+
+    //функция к пункту №6 задания
+    private static boolean proverka() {
+        int a = -4;
+        if (a < 0) { return true;} else { return false;}
+    }
+
+    //функция к пункту №5 задания
+    private static void punkt5() {
+        int a = 6;
+        if (a >= 0) { System.out.println("число " + a + " положительное"); } else {
+            System.out.println ("число " + a + " отрицательное");}
+    }
+
+    //функция к пункту №4 задания
+    private static boolean diapazon() {
+        int a4 = 3;
+        int b4 = 7;
+        if ((10 <= (a4 + b4)) && ((a4 + b4) <= 20)) {
+            return true;
+        } else { return false;}
+    }
+
+
+// функция к 3-му пункту задания. Часть 2
+    private static int calc() {
+        int a = 100;
+        int b = 50;
+        int c = 60;
+        int d = 80;
+        return a * (b + (c / d));
+    }
+
+
+}
+
